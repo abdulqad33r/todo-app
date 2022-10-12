@@ -1,0 +1,75 @@
+.login-register-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 1rem;
+}
+.inputs-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #154360;
+  gap: 2rem;
+  padding: 5rem;
+  border-radius: 2.5rem;
+  box-shadow: rgb(1, 13, 48) 0 13px 50px 0px;
+  position: relative;
+  overflow: hidden;
+}
+.inputs-container::before {
+  content: "";
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  background-color: #fec107;
+  left: 0;
+  bottom: 0;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 65%;
+  transition: all 2s cubic-bezier(0.55, -0.33, 0.01, 1.24);
+}
+.inputs-container:hover::before,
+.inputs-container:has(.focus:focus)::before {
+  width: 100%;
+  height: 30%;
+  left: 30%;
+  bottom: 85%;
+  background-color: rgb(128, 4, 4);
+}
+.inputs-container input {
+  font-size: 1.2rem;
+  width: 25rem;
+  padding: 0.8rem;
+  background: transparent;
+  color: white;
+  z-index: 2;
+}
+.inputs-container input:focus {
+  background: transparent;
+  color: white;
+}
+.inputs-container p {
+  text-align: center;
+  color: white;
+  margin: auto;
+}
+.login-link:focus,
+.register-link:focus {
+  box-shadow: rgb(0, 34, 56) 0 0 10px;
+  outline: none;
+  padding: 0.2rem;
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+}
+@media screen and (max-width: 600px) {
+  .inputs-container {
+    gap: 0.6rem;
+  }
+  .inputs-container input {
+    width: 17rem;
+  }
+}

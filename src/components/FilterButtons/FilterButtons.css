@@ -1,0 +1,7 @@
+#filterButtons {
+  flex-grow: 1;
+  flex-basis: 50%;
+  margin-left: 1px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}

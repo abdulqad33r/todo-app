@@ -1,0 +1,83 @@
+#viewtemp-label-check {
+  font-size: 1.5rem;
+}
+#edit-cancel-button,
+#delete-save-button {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  z-index: 2;
+}
+#edit-cancel-button {
+  margin-right: 1rem;
+}
+.todo-item {
+  padding: 0.5rem 1rem;
+  flex-grow: 1;
+  flex-basis: 33.333%;
+}
+.todo-buttons {
+  display: flex;
+}
+@media screen and (max-width: 600px) {
+  #viewtemp-label-check {
+    font-size: 1.2rem;
+  }
+  #edit-cancel-button,
+  #delete-save-button {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+  }
+  .todo-buttons {
+    margin-top: -0.2rem !important;
+    margin-bottom: -0.2rem !important;
+    justify-content: center;
+  }
+  .temp-form {
+    flex-wrap: wrap;
+  }
+  .editInput {
+    height: 2rem;
+    margin-top: -0.1rem !important;
+    margin-bottom: 1rem;
+    width: 12.95rem;
+  }
+}
+
+.temp-form {
+  display: flex;
+  flex: 1;
+}
+.font-monospace,
+.form-check-label {
+  transition: 2s all;
+}
+.temp {
+  padding: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+.temp::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: #fec107;
+  left: 0;
+  bottom: 0;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 50%;
+  transition: all 2s cubic-bezier(0.55, -0.33, 0.01, 1.24);
+}
+.temp:hover::before,
+.temp:focus::before,
+.temp:has(#edit-cancel-button:focus)::before,
+.temp:has(#delete-save-button:focus)::before,
+.temp:has(.checkbox:focus)::before,
+.temp:has(.editInput:focus)::before {
+  width: 90%;
+  height: 100%;
+  left: 30%;
+  bottom: 80%;
+  background-color: rgb(128, 4, 4);
+}
