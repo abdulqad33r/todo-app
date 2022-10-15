@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import firebase from "firebase/compat/app";
 import { collection, addDoc } from "firebase/firestore";
 import { serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase";
@@ -8,7 +7,6 @@ import { onAuthStateChanged } from "firebase/auth";
 
 const InputForm = (props) => {
   const [name, setName] = useState("");
-  // const [currentUserId, setCurrentUserId] = useState();
 
   const handleChange = (e) => {
     setName(e.target.value);
@@ -31,7 +29,7 @@ const InputForm = (props) => {
 
       setName("");
     } else {
-      alert("Bhai laanat hai input main to likh kuch.");
+      alert("Type something...");
     }
   };
 

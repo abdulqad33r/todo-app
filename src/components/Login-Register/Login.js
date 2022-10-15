@@ -14,7 +14,7 @@ const Login = () => {
   const login = async () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate("/tasks");
+      navigate("/todo-app");
       setEmail("");
       setPassword("");
     } catch (error) {
@@ -48,7 +48,10 @@ const Login = () => {
         </button>
         <p className="fs-5">
           Don't have an account?
-          <Link className="link-info px-2 focus register-link" to="/register">
+          <Link
+            className="link-info px-2 focus register-link"
+            to="/todo-app/register"
+          >
             Register
           </Link>
         </p>

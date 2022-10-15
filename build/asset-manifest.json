@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/todo-app/static/css/main.539d7fa3.css",
+    "main.js": "/todo-app/static/js/main.1137a29d.js",
+    "static/media/firefly2.png": "/todo-app/static/media/firefly2.1db4ad7815c05efd2f14.png",
+    "index.html": "/todo-app/index.html",
+    "main.539d7fa3.css.map": "/todo-app/static/css/main.539d7fa3.css.map",
+    "main.1137a29d.js.map": "/todo-app/static/js/main.1137a29d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.539d7fa3.css",
+    "static/js/main.1137a29d.js"
+  ]
+}

@@ -13,7 +13,7 @@ function App() {
   const [user, setUser] = useState(null);
   const RequireAuth = ({ children }) => {
     if (!user) {
-      return <Navigate to="/" />;
+      return <Navigate to="/todo-app/login" />;
     }
 
     return children;
@@ -30,13 +30,13 @@ function App() {
   });
   return (
     <Routes>
-      <Route exact path="/" element={<Login />} />
-      <Route exact path="/register" element={<Register />} />
+      <Route exact path="/todo-app/login" element={<Login />} />
+      <Route exact path="/todo-app/register" element={<Register />} />
       {/* <Route path="/tasks" element={<Protected Component={Main} />} /> */}
 
       <Route
         exact
-        path="/tasks"
+        path="/todo-app"
         element={
           <RequireAuth>
             <Main />

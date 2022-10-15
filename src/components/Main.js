@@ -100,7 +100,7 @@ const Main = () => {
         } bg-${mode === "dark" ? "dark" : "warning"}`}
       >
         <div className="container-fluid">
-          <Link className="navbar-brand px-5" to="/tasks">
+          <Link className="navbar-brand px-5" to="/todo-app">
             Todo app
           </Link>
           <button

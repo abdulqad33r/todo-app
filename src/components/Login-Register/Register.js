@@ -18,7 +18,7 @@ const Register = () => {
         await createUserWithEmailAndPassword(auth, email, password);
         setEmail("");
         setPassword("");
-        navigate("/tasks");
+        navigate("/todo-app");
       } else {
         alert("Password doesn't match");
       }
@@ -62,7 +62,7 @@ const Register = () => {
         </button>
         <p className="fs-5">
           Already have an account.
-          <Link className="link-info px-2 focus login-link" to="/">
+          <Link className="link-info px-2 focus login-link" to="/todo-app">
             Login
           </Link>
         </p>

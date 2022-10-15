@@ -8,7 +8,7 @@ const ToggleMode = (props) => {
 
   const signout = async () => {
     await signOut(auth);
-    navigate("/");
+    navigate("/todo-app");
   };
 
   return (
