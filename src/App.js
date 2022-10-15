@@ -19,6 +19,14 @@ function App() {
     return children;
   };
 
+  const RequireAuth2 = ({ children }) => {
+    if (user) {
+      return <Navigate to="/todo-app" />;
+    }
+
+    return children;
+  };
+
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
@@ -30,8 +38,24 @@ function App() {
   });
   return (
     <Routes>
-      <Route exact path="/todo-app/login" element={<Login />} />
-      <Route exact path="/todo-app/register" element={<Register />} />
+      <Route
+        exact
+        path="/todo-app/login"
+        element={
+          <RequireAuth2>
+            <Login />
+          </RequireAuth2>
+        }
+      />
+      <Route
+        exact
+        path="/todo-app/register"
+        element={
+          <RequireAuth2>
+            <Register />
+          </RequireAuth2>
+        }
+      />
       {/* <Route path="/tasks" element={<Protected Component={Main} />} /> */}
 
       <Route
@@ -41,6 +65,14 @@ function App() {
           <RequireAuth>
             <Main />
           </RequireAuth>
+        }
+      />
+      <Route
+        path="*"
+        element={
+          <RequireAuth2>
+            <Navigate to="/todo-app/login" replace />
+          </RequireAuth2>
         }
       />
     </Routes>

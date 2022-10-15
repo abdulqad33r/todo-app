@@ -60,7 +60,7 @@ const Register = () => {
         <button className="btn btn-danger btn-lg focus" onClick={register}>
           Create user
         </button>
-        <p className="fs-5">
+        <p>
           Already have an account.
           <Link className="link-info px-2 focus login-link" to="/todo-app">
             Login

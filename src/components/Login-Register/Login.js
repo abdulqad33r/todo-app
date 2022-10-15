@@ -46,7 +46,7 @@ const Login = () => {
         <button className="btn btn-info btn-lg focus" onClick={login}>
           Log in
         </button>
-        <p className="fs-5">
+        <p>
           Don't have an account?
           <Link
             className="link-info px-2 focus register-link"
