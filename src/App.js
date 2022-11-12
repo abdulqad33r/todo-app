@@ -39,19 +39,19 @@ function App() {
   return (
     <Routes>
       <Route
-        exact
+        // exact
         path="/todo-app/login"
         element={user ? <Main /> : <Login />}
       />
       <Route
-        exact
+        // exact
         path="/todo-app/register"
         element={user ? <Main /> : <Register />}
       />
       {/* <Route path="/tasks" element={<Protected Component={Main} />} /> */}
 
       <Route
-        exact
+        // exact
         path="/todo-app"
         element={
           <RequireAuth>
